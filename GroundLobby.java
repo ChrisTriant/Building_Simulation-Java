@@ -36,11 +36,14 @@ public class GroundLobby extends Entrance {
 						}						
 					}
 				}else{
-					gf_queue.addFirst(enter1(varray));
-					System.out.println("visitor with destination "+gf_queue.getFirst().getfloor()+"-"+gf_queue.getFirst().getoffice()+" has entered the building\n");
-					gfcounter++;
-					voutside--;
-					bcounter++;
+					Human v=enter1(varray);
+					if(v!=null) {
+						gf_queue.addFirst(v);
+						System.out.println("visitor with destination "+gf_queue.getFirst().getfloor()+"-"+gf_queue.getFirst().getoffice()+" has entered the building\n");
+						gfcounter++;
+						voutside--;
+						bcounter++;
+					}
 				}
 			}
 		}else{

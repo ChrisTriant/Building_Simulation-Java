@@ -31,8 +31,11 @@ public class Floor extends Level {
 					}
 					
 				}else {
-					office_enter(((WaitingLobby) entr).exit1(i+1),i);
-					vcounter--;
+					Human v=((WaitingLobby) entr).exit1(i+1);
+					if(v!=null) {
+						office_enter(v,i);
+						vcounter--;
+					}
 				}
 			}
 

@@ -26,7 +26,7 @@ public class Main {
 		}
 		System.out.printf("Office capacity is: %d\n ",No);
 		int Nl=Integer.parseInt(args[5]);
-		if(Nl < 10||Nl>Ng){
+		if(Nl <No){
 			System.out.printf("Invalid capacities.Please try again");
 			return ;	
 		}
